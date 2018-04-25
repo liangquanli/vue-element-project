@@ -7,10 +7,8 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import '@/util/Common';
 import axios from 'axios'; 
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
 
-require('./mock');
+// require('./mock');
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false
