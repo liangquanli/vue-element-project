@@ -1,5 +1,8 @@
 <template>
-  <extendTable :projectData='projectData' :tableHeadData='tableHeadData' :tableData='tableData'></extendTable>
+  <div>
+    <el-button type="" @click="back" style="float:right">返回</el-button>
+    <extendTable :projectData='projectData' :tableHeadData='tableHeadData' :tableData='tableData'></extendTable>
+  </div>
 </template>
 <script>
 import extendTable from '@/module/common/MyExtendTable'
@@ -125,6 +128,11 @@ export default {
   },
   components: {
     extendTable
+  },
+  methods: {
+    back(){
+      window.history.back();
+    },
   }
 }
 </script>

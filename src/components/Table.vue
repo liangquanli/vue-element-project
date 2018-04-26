@@ -1,7 +1,9 @@
 <template>
-<comVariableTable :tableData='tableData' :tableHeadData='tableHeadData' :sizeChange='sizeChange' :currentChange='currentChange' :total='total' :tableHandleData='tableHandleData' @saveData="saveData" @editData="editData" :tableHeight="tableHeight" :clientWidth="clientWidth">
-
-</comVariableTable>
+<div>
+  <el-button type="" @click="back" style="float:right">返回</el-button>
+  <comVariableTable :tableData='tableData' :tableHeadData='tableHeadData' :sizeChange='sizeChange' :currentChange='currentChange' :total='total' :tableHandleData='tableHandleData' @saveData="saveData" @editData="editData" :tableHeight="tableHeight" :clientWidth="clientWidth">
+  </comVariableTable>
+</div>
 </template>
 
 <script>
@@ -63,10 +65,13 @@ export default {
           suc: 'suc'
         }
       })
+    },
+    back(){
+      window.history.back();
+    },
+    suc(res){
+      console.log(res);
     }
-  },
-  suc(res){
-    console.log(res);
   },
   components: {
     comVariableTable
