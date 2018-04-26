@@ -6,6 +6,7 @@
 
 <script>
 import comVariableTable from '@/module/common/ComVariableTable'
+import mock from '@/mock/mock'
 export default {
   name: 'HelloWorld',
   data () {
@@ -52,7 +53,20 @@ export default {
     editData(val){
       console.log(val);
       this.showLoadingAct('编辑成功', '玩命加载中');
+    },
+    serachData(){
+      this.apGet({
+        url: 'lql/liangquanli/test',
+        params: {
+          size: 10,
+          page: 1,
+          suc: 'suc'
+        }
+      })
     }
+  },
+  suc(res){
+    console.log(res);
   },
   components: {
     comVariableTable
@@ -68,5 +82,8 @@ export default {
       })()
     }
   },
+  created(){
+    this.serachData();
+  }
 }
 </script>

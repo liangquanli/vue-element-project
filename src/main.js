@@ -7,8 +7,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import '@/util/Common';
 import axios from 'axios'; 
-
-// require('./mock');
+import VueRouter from 'vue-router';
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false
